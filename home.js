@@ -153,13 +153,13 @@ function parseCSV(csv) {
     data.y_value1.push(parseFloat(currentLine[2]));
     data.ym_value1.push(parseFloat(currentLine[3]));
     data.y_value2.push(parseFloat(currentLine[4]));
-    data.ym_value2.push(parseFloat(currentLine[4]));
-    data.y_value3.push(parseFloat(currentLine[5]));
-    data.ym_value3.push(parseFloat(currentLine[6]));
-    data.y_value4.push(parseFloat(currentLine[7]));
-    data.ym_value4.push(parseFloat(currentLine[8]));
-    data.y_value5.push(parseFloat(currentLine[9]));
-    data.ym_value5.push(parseFloat(currentLine[10]));
+    data.ym_value2.push(parseFloat(currentLine[5]));
+    data.y_value3.push(parseFloat(currentLine[6]));
+    data.ym_value3.push(parseFloat(currentLine[7]));
+    data.y_value4.push(parseFloat(currentLine[8]));
+    data.ym_value4.push(parseFloat(currentLine[9]));
+    data.y_value5.push(parseFloat(currentLine[10]));
+    data.ym_value5.push(parseFloat(currentLine[11]));
   }
   return data;
 }

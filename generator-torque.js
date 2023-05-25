@@ -84,8 +84,8 @@ function parseCSV(csv) {
 
   for (let i = 1; i < lines.length; i++) {
     const currentLine = lines[i].split(",");
-    data.y_value.push(parseFloat(currentLine[7])); //THIS IS WHERE we choose which column to display
-    data.ym_value.push(parseFloat(currentLine[8]));
+    data.y_value.push(parseFloat(currentLine[8])); //THIS IS WHERE we choose which column to display
+    data.ym_value.push(parseFloat(currentLine[9]));
   }
 
   return data;
