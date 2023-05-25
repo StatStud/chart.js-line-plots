@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #liveReadingsContainer {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: center;
+            align-items: center;
+            height: 100px; /* Adjust the height as needed */
+            font-size: 20px; /* Adjust the font size as needed */
+            font-weight: bold;
+            margin: 0px;
+        }
+        .chartButton {
+            width: 90px;
+            height: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h2 style="display: flex; justify-content: center;align-items: center; margin: 0px; padding: 0px;">Shaft Speed</h2>
+    <div>
+        <div id="liveReadingsContainer">
+            <div id="realValueContainer"></div>
+            <div id="simulatedValueContainer"></div>
+        </div>
+        <canvas id="myChart"></canvas>
+    </div>
+    <p>
+        <button id="returnButton" class="chartButton">Return</button>
+		<button id="resetZoom" class="chartButton">Reset Zoom</button>
+	</p>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.3"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7"></script>
+    <script src="water-head.js"></script>
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html onclick="display(event)">
+<head>
+	<!-- <script>
+		// Wait for 1 second before loading the page to allow time for variables to update
+		setTimeout(function() {
+		  window.location.reload();
+		}, 1000);
+	  </script> -->
+	<title>Home Page</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+			padding-top: 50px;
+		}
+		h1 {
+			font-size: 32px;
+			margin-bottom: 20px;
+		}
+		.info1 {
+			position: absolute;
+			top: 460px;
+			left: 175px;
+			width: 175px;
+			height: 115px;
+			background-color: aqua;
+		}
+		.info2 {
+			position: absolute;
+			top: 460px;
+			left: 400px;
+			width: 175px;
+			height: 115px;
+			background-color: aqua;
+		}
+		.info3 {
+			position: absolute;
+			top: 400px;
+			left: 565px;
+			width: 175px;
+			height: 115px;
+			background-color: aqua;
+		}
+		.info4 {
+			position: absolute;
+			top: 245px;
+			left: 565px;
+			width: 175px;
+			height: 115px;
+			background-color: aqua;
+		}
+		.info5 {
+			position: absolute;
+			top: 100px;
+			left: 565px;
+			width: 175px;
+			height: 115px;
+			background-color: aqua;
+		}
+	</style>
+	     <script>
+			function display(event) {
+			   let X = event.clientX;
+			   let Y = event.clientY;
+			   let result = document.getElementById("result");
+			   result.innerHTML = "<b>X-coordinate: </b>" + X + "<br><b>Y-coordinate: </b>: " + Y;
+			}
+		 </script>
+</head>
+<body>
+	<!-- <h2> click <a href="index.html"> here </a>to view plot </h2> -->
+	<!-- <h1 id="para">Click anywhere on the screen to see X and Y-coordinate of the cursor using JavaScript properties.</h1>
+	<h1 id="result"></h1> -->
+	<img style="position: absolute; top:50; left:0;" height="600px" width = "1200px" src='../static/dam.png'/>
+	<div class="info1">
+		<h3 style="margin: 5px;"> <strong> <a href="water-head.html">Water Head</a> </strong> </h5>
+		<div class = "sim-value" id="realValueContainer1"></div>
+		<div class="true-value" id="simulatedValueContainer1"></div>
+	</div>
+	<div class="info2">
+		<h3 style="margin: 5px;"> <strong> <a href="water-flow.html"> Water Flow </a> </strong> </h5>
+			<div class = "sim-value" id="realValueContainer2"></div>
+			<div class="true-value" id="simulatedValueContainer2"></div>
+	</div>
+	<div class="info3">
+		<h3 style="margin: 5px;"> <strong> <a href="shaft-speed.html">Shaft Speed </a> </strong> </h5>
+			<div class = "sim-value" id="realValueContainer3"></div>
+			<div class="true-value" id="simulatedValueContainer3"></div>
+	</div>
+	<div class="info4">
+		<h3 style="margin: 5px;"> <strong> <a href="generator-torque.html">Generator Torque </a></strong> </h5>
+			<div class = "sim-value" id="realValueContainer4"></div>
+			<div class="true-value" id="simulatedValueContainer4"></div>
+	</div>
+	<div class="info5">
+		<h3 style="margin: 5px;"> <strong> <a href="generator-output.html">Generator Output </a></strong> </h5>
+			<div class = "sim-value" id="realValueContainer5"></div>
+			<div class="true-value" id="simulatedValueContainer5"></div>
+	</div>
+	
+	
+	
+	
+	<div id="hide" style="height:10px; width:10px">
+		<canvas id="myChart"></canvas>
+	</div>
+	<!-- <h1>Current Values</h1>
+	<div class="current-values">
+		True Value: <div id="true-value-box"></div>
+	</div>
+	<div class="current-values">
+		Simulated Value: <div id="sim-value-box"></div>
+	</div> -->
+
+	<!-- <script>
+		var trueValue = 0;
+		var simValue = 0;
+		document.addEventListener('DOMContentLoaded', () => {
+			setInterval(() => {
+				document.getElementById('true-value-box').innerHTML = trueValue.toFixed(2);
+				document.getElementById('sim-value-box').innerHTML = simValue.toFixed(2);
+			}, 1000);
+		});
+	</script> -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
+        integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdn.jsdelivr.net/npm/moment@2.29.1/min/moment.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.4"></script>
+	<!-- <script src="https://cdn.jsdelivr.net/npm/hammerjs@2.0.8"></script> -->
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-zoom@0.7.7"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-streaming@1.9.0"></script>
+	<script src="./static/script.js"></script>
+	<script>
+		function generateRandomNumber() {
+		  let randomNumber = (Math.random() * (357 - 356) + 356).toFixed(12);
+		  let demoElements = document.querySelectorAll(".demo");
+			for (let i = 0; i < demoElements.length; i++) {
+				demoElements[i].textContent = randomNumber;
+			}
+		}
+		
+		// Call the function to generate a new random number every second
+		setInterval(generateRandomNumber, 500);
+	  </script>
+	<script src="home.js"></script>
+</body>
+</html>
